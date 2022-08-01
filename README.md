@@ -9,7 +9,7 @@ IntelliJ Settings
 
 ## awk
 ```shell
-awk -F'xxx|yyy' '{print $2; fflush()}'
+awk -F'(xxx|yyy)' '{print $2; fflush()}'
 ```
 
 ## curl
