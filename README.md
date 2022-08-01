@@ -31,3 +31,8 @@ dig +short ifconfig.io
 ```shell
 grep --line-buffered -E '(^|\W)xxx($|\W)' yyy.txt
 ```
+
+## perl
+```shell
+perl -pe "$|=1;s;xxx;zzz;g" yyy.txt
+```
