@@ -37,6 +37,17 @@ grep --line-buffered -E '(^|\W)xxx($|\W)' yyy.txt
 jq . --unbuffered yyy.json
 ```
 
+## kubectl
+```shell
+kubectl describe xxx
+```
+
+## mvn
+```shell
+mvn dependency:tree
+mvn clean compile -U
+```
+
 ## perl
 ```shell
 perl -pe "$|=1;s;xxx;zzz;g" yyy.txt
