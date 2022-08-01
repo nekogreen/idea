@@ -32,6 +32,11 @@ dig +short ifconfig.io
 grep --line-buffered -E '(^|\W)xxx($|\W)' yyy.txt
 ```
 
+## jq
+```shell
+jq . --unbuffered yyy.json
+```
+
 ## perl
 ```shell
 perl -pe "$|=1;s;xxx;zzz;g" yyy.txt
