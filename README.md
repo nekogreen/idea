@@ -5,7 +5,7 @@ IntelliJ Settings
 - Editor > Color Scheme > Java Method call
 - Plugins > CamelCase
 
-# Commands
+# Favorite Commands
 
 ## awk
 ```shell
