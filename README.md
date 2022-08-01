@@ -45,6 +45,8 @@ kubectl describe xxx
 ## mvn
 ```shell
 mvn dependency:tree
+```
+```shell
 mvn clean compile -U
 ```
 
