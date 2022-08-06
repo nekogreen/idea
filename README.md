@@ -64,7 +64,7 @@ sudo tcpdump -i pktap,lo -s0 -An \(port 80 or port 8080 or port 8000 or port 808
 
 ## i2cssh
 ```shell
-i2cssh -p"PROFILE" -l"LOGIN" -C1 -m"${MACHINES}"
+i2cssh -p"PROFILE" -l"LOGIN" -C1 -m"MACHINE,MACHINE,MACHINE"
 ```
 
 # Server Performance Tuning
