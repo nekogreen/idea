@@ -55,9 +55,16 @@ mvn clean compile -U
 perl -pe "$|=1;s;xxx;zzz;g" yyy.txt
 ```
 
-## tcpdump on osx
+# Favorite Commands On OSX
+
+## tcpdump
 ```shell
 sudo tcpdump -i pktap,lo -s0 -An \(port 80 or port 8080 or port 8000 or port 8081\) and greater 128
+```
+
+## i2cssh
+```shell
+i2cssh -p"PROFILE" -l"LOGIN" -C1 -m"${MACHINES}"
 ```
 
 # Server Performance Tuning
