@@ -55,6 +55,11 @@ mvn clean compile -U
 perl -pe "$|=1;s;xxx;zzz;g" yyy.txt
 ```
 
+## tcpdump on osx
+```shell
+sudo tcpdump -i pktap,lo -s0 -An \(port 80 or port 8080 or port 8000 or port 8081\) and greater 128
+```
+
 # Favorite one liner
 
 ## File descriptor
