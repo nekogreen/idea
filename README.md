@@ -60,7 +60,7 @@ perl -pe "$|=1;s;xxx;zzz;g" yyy.txt
 sudo tcpdump -i pktap,lo -s0 -An \(port 80 or port 8080 or port 8000 or port 8081\) and greater 128
 ```
 
-# Favorite one liner
+# Server Performance Tuning
 
 ## File descriptor
 ```shell
@@ -69,4 +69,9 @@ for P in httpd java mysql; do
     printf '%s\t%s\t%s\n' "$P" "$PID" "$(grep 'open' "/proc/$PID/limits")"
   done
 done
+```
+
+## Port range and keepalive
+```shell
+sudo sysctl -a | grep -E 'keepalive|port_range'
 ```
