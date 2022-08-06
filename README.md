@@ -61,7 +61,7 @@ perl -pe "$|=1;s;xxx;zzz;g" yyy.txt
 ```shell
 for P in httpd java mysql; do
   PIDS=$(pgrep $P) && for PID in $PIDS; do
-    printf "%s\t%s\t%s\n" "$P" "$PID" "$(grep 'open' "/proc/$PID/limits")"
+    printf '%s\t%s\t%s\n' "$P" "$PID" "$(grep 'open' "/proc/$PID/limits")"
   done
 done
 ```
