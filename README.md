@@ -37,6 +37,12 @@ dig +short ifconfig.io
 find . -type f -mmin -10 -name "only-last-10-minutes"
 ```
 
+## go
+
+```shell
+return nil, fmt.Errorf("failed to xxx (yyy=%v): %w", yyy, err)
+```
+
 ## grep
 
 ```shell
