@@ -77,6 +77,12 @@ mvn clean compile -U
 perl -pe "$|=1;s;foo;baz;g" bar.txt
 ```
 
+## ssh-keygen
+
+```shell
+ssh-keygen -t rsa -b 4096 -C "foo"
+```
+
 # Favorite Commands On OSX
 
 ## i2cssh
