@@ -67,6 +67,12 @@ jq . --unbuffered foo.json
 kubectl describe foo
 ```
 
+## ln
+
+```shell
+sudo ln -nfs /home/ec2-user/sh/foo.sh /usr/local/bin/foo
+```
+
 ## mvn
 
 ```shell
