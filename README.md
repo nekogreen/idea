@@ -10,7 +10,7 @@ IntelliJ Settings
 ## awk
 
 ```shell
-awk -F'(xxx|yyy)' '{print $2; fflush()}'
+awk -F'(foo|bar)' '{print $2; fflush()}'
 ```
 
 ## curl
@@ -40,25 +40,25 @@ find . -type f -mmin -10 -name "only-last-10-minutes"
 ## go
 
 ```shell
-return nil, fmt.Errorf("failed to xxx (yyy=%v): %w", yyy, err)
+return nil, fmt.Errorf("failed to foo (bar=%v): %w", bar, err)
 ```
 
 ## grep
 
 ```shell
-grep --line-buffered -E '(^|\W)xxx($|\W)' yyy.txt
+grep --line-buffered -E '(^|\W)foo($|\W)' bar.txt
 ```
 
 ## jq
 
 ```shell
-jq . --unbuffered yyy.json
+jq . --unbuffered bar.json
 ```
 
 ## kubectl
 
 ```shell
-kubectl describe xxx
+kubectl describe foo
 ```
 
 ## mvn
@@ -74,7 +74,7 @@ mvn clean compile -U
 ## perl
 
 ```shell
-perl -pe "$|=1;s;xxx;zzz;g" yyy.txt
+perl -pe "$|=1;s;foo;baz;g" bar.txt
 ```
 
 # Favorite Commands On OSX
