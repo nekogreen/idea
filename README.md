@@ -4,6 +4,7 @@ IntelliJ Settings
 
 - Editor > Color Scheme > Java Method call
 - Plugins > CamelCase
+- Plugins > Frame Switcher
 
 # Favorite Commands
 
