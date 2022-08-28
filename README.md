@@ -49,6 +49,12 @@ return nil, fmt.Errorf("failed to foo (bar=%v): %w", bar, err)
 grep --line-buffered -E '(^|\W)foo($|\W)' bar.txt
 ```
 
+## gunzip
+
+```shell
+find /home/ec2-user/foo -name '*.gz' -print0 | xargs -0 -n1 gunzip
+```
+
 ## jq
 
 ```shell
