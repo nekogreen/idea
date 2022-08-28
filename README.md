@@ -52,7 +52,7 @@ grep --line-buffered -E '(^|\W)foo($|\W)' bar.txt
 ## jq
 
 ```shell
-jq . --unbuffered bar.json
+jq . --unbuffered foo.json
 ```
 
 ## kubectl
@@ -74,7 +74,13 @@ mvn clean compile -U
 ## perl
 
 ```shell
-perl -pe "$|=1;s;foo;baz;g" bar.txt
+perl -pe "$|=1;s;foo;baz;g" baz.txt
+```
+
+## scp
+
+```shell
+scp host:/home/ec2-user/foo/* ./
 ```
 
 ## ssh-keygen
