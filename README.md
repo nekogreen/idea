@@ -77,6 +77,12 @@ mvn clean compile -U
 perl -pe "$|=1;s;foo;baz;g" baz.txt
 ```
 
+## ps
+
+```shell
+ps aux | grep -Ev "^$(id -un)" | grep foo
+```
+
 ## scp
 
 ```shell
