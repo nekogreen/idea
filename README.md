@@ -189,12 +189,6 @@ tail -F /var/log/tomcat/catalina.out | grep -E "^(.*(^|\W)(WARN|WARNING|ERROR|SE
 
 # Favorite Commands On OSX
 
-## i2cssh
-
-```shell
-i2cssh -p"PROFILE" -l"LOGIN" -C1 -m"MACHINE,MACHINE,MACHINE"
-```
-
 ## tcpdump
 
 ```shell
