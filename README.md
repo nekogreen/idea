@@ -207,8 +207,8 @@ sudo tcpdump -i pktap,lo -s0 -An \(port 80 or port 8080 or port 8000 or port 808
 
 ```shell
 for P in httpd java mysql; do
-  PIDS=$(pgrep $P) && for PID in $PIDS; do
-    printf '%s\t%s\t%s\n' "$P" "$PID" "$(grep 'open' "/proc/$PID/limits")"
+  PIDS=$(pgrep ${P}) && for PID in ${PIDS}; do
+    printf '%s\t%s\t%s\n' "${P}" "${PID}" "$(grep 'open' "/proc/${PID}/limits")"
   done
 done
 ```
