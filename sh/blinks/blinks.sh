@@ -21,8 +21,8 @@ blink() {
   [ -e "${TYPE}" ] || mkdir "${TYPE}"
   for NO in $(seq -f %02g 1 5); do
     UPPER_TYPE=$(echo "${TYPE}" | tr '[:lower:]' '[:upper:]')
-    cat /dev/null >"${TYPE}/${UPPER_TYPE}-$NO-LEFT.${TYPE}"
-    cat /dev/null >"${TYPE}/${UPPER_TYPE}-$NO-RIGHT.${TYPE}"
+    cat /dev/null >"${TYPE}/${UPPER_TYPE}-${NO}-LEFT.${TYPE}"
+    cat /dev/null >"${TYPE}/${UPPER_TYPE}-${NO}-RIGHT.${TYPE}"
   done
 }
 
