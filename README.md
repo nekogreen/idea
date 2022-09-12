@@ -133,6 +133,16 @@ perl -pe "$|=1;s;foo;baz;g" baz.txt
 ps aux | grep -Ev "^$(id -un)" | grep foo
 ```
 
+## rpm
+
+```shell
+rpm -qa | grep foo
+```
+
+```shell
+rpm -qs foo
+```
+
 ## scp
 
 ```shell
