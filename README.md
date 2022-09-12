@@ -66,12 +66,20 @@ grep --line-buffered -Er '(^|\W)foo($|\W)' ./ --exclude-dir={.git,.idea}
 find /home/ec2-user/foo -name '*.gz' -print0 | xargs -0 -n1 gunzip
 ```
 
-## HTTPd
+## Apache HTTP Server
 
 #### log coloring
 
 ```shell
-| perl -pe 's;(" )([0-9])([0-9]{2})( );\1\e[3\2m\2\3\e[m\4;'
+tail -F /var/log/httpd/access_log | perl -pe 's;(" )([0-9])([0-9]{2})( );\1\e[3\2m\2\3\e[m\4;'
+```
+
+## Jenkins
+
+#### find raw settings
+
+```shell
+for CONFIG_PATH in $(find /var/lib/jenkins/jobs/ -maxdepth 2 -name "config.xml" | sort); do RESULT=$(grep 'foo' "${CONFIG_PATH}") && echo "${CONFIG_PATH}" "${RESULT}"; done
 ```
 
 ## jq
