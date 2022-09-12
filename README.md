@@ -66,7 +66,7 @@ grep --line-buffered -Er '(^|\W)foo($|\W)' ./ --exclude-dir={.git,.idea}
 find /home/ec2-user/foo -name '*.gz' -print0 | xargs -0 -n1 gunzip
 ```
 
-## Apache HTTP Server
+## httpd
 
 #### change color for each status
 
