@@ -28,7 +28,7 @@ beam() {
 }
 
 usage() {
-  echo "Usage: $0 [OPTION] ${1:-[PARAMETER]}"
+  echo "Usage: ${0} [OPTION] ${1:-[PARAMETER]}"
   exit 1
 }
 
