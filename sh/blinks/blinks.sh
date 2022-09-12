@@ -2,7 +2,7 @@
 set -euo pipefail
 
 WORKING_DIR="$(basename "$(pwd)")"
-EXECUTABLE_DIR="eyes"
+EXECUTABLE_DIR=".blinks-eyes"
 
 blinks() {
   if [ "${WORKING_DIR}" != "${EXECUTABLE_DIR}" ]; then
