@@ -19,9 +19,9 @@ blinks() {
 blink() {
   TYPE=${1}
   [ -e "${TYPE}" ] || mkdir "${TYPE}"
-  for N in $(seq -f %02g 1 5); do
-    cat /dev/null >"${TYPE}/${TYPE}.$N.LEFT.${TYPE}"
-    cat /dev/null >"${TYPE}/${TYPE}.$N.RIGHT.${TYPE}"
+  for NO in $(seq -f %02g 1 5); do
+    cat /dev/null >"${TYPE}/${TYPE}.$NO.LEFT.${TYPE}"
+    cat /dev/null >"${TYPE}/${TYPE}.$NO.RIGHT.${TYPE}"
   done
 }
 
