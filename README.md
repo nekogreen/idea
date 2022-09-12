@@ -125,6 +125,20 @@ mvn dependency:tree
 mvn clean compile -U
 ```
 
+## mysql
+
+```shell
+mysql -uroot -e "show variables like '%char%'";
+```
+
+```shell
+mysql -uroot -e "show variables like '%connections%'";
+```
+
+```shell
+mysql -uroot -e "show grants for 'root'@'localhost'";
+```
+
 ## perl
 
 ```shell
