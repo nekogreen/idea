@@ -27,7 +27,7 @@ date "+%Y-%m-%d %H:%M:%S"
 ```
 
 ```shell
-date --date "1day ago" "+%Y-%m-%d %H:%M:%S"
+date --date "1 day ago" "+%Y-%m-%d %H:%M:%S"
 ```
 
 ## dig
