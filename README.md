@@ -68,7 +68,7 @@ find /home/ec2-user/foo -name '*.gz' -print0 | xargs -0 -n1 gunzip
 
 ## Apache HTTP Server
 
-#### log coloring
+#### change color for each status
 
 ```shell
 tail -F /var/log/httpd/access_log | perl -pe 's;(" )([0-9])([0-9]{2})( );\1\e[3\2m\2\3\e[m\4;'
@@ -80,6 +80,17 @@ tail -F /var/log/httpd/access_log | perl -pe 's;(" )([0-9])([0-9]{2})( );\1\e[3\
 
 ```shell
 for CONFIG_PATH in $(find /var/lib/jenkins/jobs/ -maxdepth 2 -name "config.xml" | sort); do RESULT=$(grep 'foo' "${CONFIG_PATH}") && echo "${CONFIG_PATH}" "${RESULT}"; done
+```
+
+#### open all advanced settings
+
+```js
+const buttons = document.getElementsByTagName('button');
+for (let i = 0; i < buttons.length; i++) {
+    if (buttons[i].textContent === 'Advanced...') {
+        buttons[i].click();
+    }
+}
 ```
 
 ## jq
