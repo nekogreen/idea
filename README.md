@@ -157,6 +157,14 @@ ssh-keygen -t rsa -b 4096 -C "foo"
 
 ## Tomcat
 
+#### change color
+
+```shell
+tail -F /var/log/tomcat/catalina.out | perl -pe "s;^(.*(^|\W)(WARN|WARNING|ERROR|SEVERE|Server startup|shutdown)($|\W).*)$;\e[31m\1\e[m;i"
+```
+
+#### grep
+
 ```shell
 tail -F /var/log/tomcat/catalina.out | grep -E "^(.*(^|\W)(WARN|WARNING|ERROR|SEVERE|Server startup|shutdown)($|\W).*)$" --color=always --line-buffered -A1
 ```
