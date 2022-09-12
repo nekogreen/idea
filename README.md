@@ -38,7 +38,9 @@ dig +short ifconfig.io
 find . -type f -mmin -10 -name "only-last-10-minutes"
 ```
 
-## go
+## Go
+
+#### error message
 
 ```shell
 return nil, fmt.Errorf("failed to foo (bar=%v): %w", bar, err)
@@ -62,6 +64,14 @@ grep --line-buffered -Er '(^|\W)foo($|\W)' ./ --exclude-dir={.git,.idea}
 
 ```shell
 find /home/ec2-user/foo -name '*.gz' -print0 | xargs -0 -n1 gunzip
+```
+
+## HTTPd
+
+#### log coloring
+
+```shell
+| perl -pe 's;(" )([0-9])([0-9]{2})( );\1\e[3\2m\2\3\e[m\4;'
 ```
 
 ## jq
