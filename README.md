@@ -155,6 +155,12 @@ scp host:/home/ec2-user/foo/* ./
 ssh-keygen -t rsa -b 4096 -C "foo"
 ```
 
+## Tomcat
+
+```shell
+tail -F /var/log/tomcat/catalina.out | grep -E "^(.*(^|\W)(WARN|WARNING|ERROR|SEVERE|Server startup|shutdown)($|\W).*)$" --color=always --line-buffered -A1
+```
+
 # Favorite Commands On OSX
 
 ## i2cssh
