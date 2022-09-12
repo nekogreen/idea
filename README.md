@@ -26,6 +26,10 @@ curl -c cookie.txt -b cookie.txt -w "http_code=%{http_code}, time_total=%{time_t
 date "+%Y-%m-%d %H:%M:%S"
 ```
 
+```shell
+date --date "1day ago" "+%Y-%m-%d %H:%M:%S"
+```
+
 ## dig
 
 ```shell
