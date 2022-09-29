@@ -9,18 +9,19 @@ hawk_eye() {
 
     git fetch
     CURRENT_BRANCH=$(git branch --show-current)
+    UP_TO_DATE=$(git status | grep 'up to date' >/dev/null 2>&1 && echo "/" || echo "*")
     HAS_REMOTE_DEVELOP=$(git branch -a | grep -e 'remotes/upstream/develop' >/dev/null 2>&1 && echo true || echo false)
     GIT_DIFF=$(git diff --exit-code --quiet && echo "-" || echo "+")
     if [ "${GIT_DIFF}" == "+" ]; then
-      echo "${PROJECT_ROOT} ${CURRENT_BRANCH} ${GIT_DIFF}"
+      echo "${PROJECT_ROOT} ${CURRENT_BRANCH} ${GIT_DIFF} ${UP_TO_DATE}"
       continue
     fi
     if [ "${CURRENT_BRANCH}" == "master" ] && ${HAS_REMOTE_DEVELOP}; then
-      echo "${PROJECT_ROOT} ${CURRENT_BRANCH} ${GIT_DIFF}"
+      echo "${PROJECT_ROOT} ${CURRENT_BRANCH} ${GIT_DIFF} ${UP_TO_DATE}"
       continue
     fi
     if [ "${CURRENT_BRANCH}" != "master" ] && [ "${CURRENT_BRANCH}" != "develop" ]; then
-      echo "${PROJECT_ROOT} ${CURRENT_BRANCH} ${GIT_DIFF}"
+      echo "${PROJECT_ROOT} ${CURRENT_BRANCH} ${GIT_DIFF} ${UP_TO_DATE}"
       continue
     fi
     HAS_TRACKED_DEST=$(git branch -vv | grep -e "^\*.*\[upstream/${CURRENT_BRANCH}\]" >/dev/null 2>&1 && echo true || echo false)
