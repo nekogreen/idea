@@ -39,7 +39,11 @@ dig +short ifconfig.io
 ## find
 
 ```shell
-find . -type f -mmin -10 -name "only-last-10-minutes"
+find ./ -type f -mmin -10 -name "newer than 10 minutes ago"
+```
+
+```shell
+find ./ -type f -daystart -mtime +0 -name "older than today"
 ```
 
 ## Go
