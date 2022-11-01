@@ -57,15 +57,15 @@ return nil, fmt.Errorf("failed to foo (bar=%v): %w", bar, err)
 ## grep
 
 ```shell
-grep --line-buffered -E '(^|\W)foo($|\W)' bar.txt
+grep --line-buffered -E '(^|\W)(foo)($|\W)' bar.txt
 ```
 
 ```shell
-grep --line-buffered -Er '(^|\W)foo($|\W)' ./ --exclude-dir=.git
+grep --line-buffered -Er '(^|\W)(foo)($|\W)' ./ --exclude-dir=.git
 ```
 
 ```shell
-grep --line-buffered -Er '(^|\W)foo($|\W)' ./ --exclude-dir={.git,.idea}
+grep --line-buffered -Er '(^|\W)(foo)($|\W)' ./ --exclude-dir={.git,.idea}
 ```
 
 ## gunzip
