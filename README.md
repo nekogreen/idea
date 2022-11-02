@@ -143,6 +143,12 @@ mysql -uroot -e "show variables like '%connections%'";
 mysql -uroot -e "show grants for 'root'@'localhost'";
 ```
 
+## Null Device
+
+```shell
+>/dev/null
+```
+
 ## perl
 
 ```shell
