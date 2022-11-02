@@ -177,6 +177,12 @@ scp host:/home/ec2-user/foo/* ./
 ssh-keygen -t rsa -b 4096 -C "foo"
 ```
 
+## tee
+
+```shell
+2>&1 | tee ~/foo.txt
+```
+
 ## Tomcat
 
 #### change color of important messages
