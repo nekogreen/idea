@@ -6,6 +6,14 @@ usage() {
   exit 1
 }
 
+showPleaseWait() {
+  for C in . .. ...; do
+    printf "%$(tput cols)s\r"
+    echo -en "Please wait$C\r"
+    sleep 0.3
+  done
+}
+
 while getopts :u: OPT; do
   case ${OPT} in
   u)
