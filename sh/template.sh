@@ -1,7 +1,12 @@
 #!/bin/bash
 set -euo pipefail
+WORKSPACE=$(
+  cd "$(dirname "${0}")"
+  pwd
+)
 
 usage() {
+  echo "Workspace: ${WORKSPACE}"
   echo "Usage: ${0} [OPTION] ${1:-[PARAMETER]}"
   exit 1
 }
