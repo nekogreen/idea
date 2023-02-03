@@ -6,7 +6,7 @@ usage() {
   exit 1
 }
 
-showPleaseWait() {
+show_please_wait() {
   for C in . .. ...; do
     printf "%$(tput cols)s\r"
     echo -en "Please wait$C\r"
