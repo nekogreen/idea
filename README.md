@@ -2,7 +2,8 @@
 
 IntelliJ Settings
 
-- Editor > Color Scheme > Java Method call
+- Editor > Color Scheme > Java > Method call
+- Editor > Color Scheme > Java > Static method
 - Plugins > CamelCase
 - Plugins > Frame Switcher
 
