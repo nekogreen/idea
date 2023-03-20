@@ -188,8 +188,14 @@ ssh-keygen -t rsa -b 4096 -C "foo"
 
 ```shell
 sudo systemctl start httpd.service
+```
+```shell
 sudo systemctl status httpd.service
+```
+```shell
 sudo systemctl enable httpd.service
+```
+```shell
 sudo systemctl is-enabled httpd.service
 ```
 
