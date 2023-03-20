@@ -184,6 +184,15 @@ scp host:/home/ec2-user/foo/* ./
 ssh-keygen -t rsa -b 4096 -C "foo"
 ```
 
+## systemctl
+
+```shell
+sudo systemctl start httpd.service
+sudo systemctl status httpd.service
+sudo systemctl enable httpd.service
+sudo systemctl is-enabled httpd.service
+```
+
 ## tee
 
 ```shell
