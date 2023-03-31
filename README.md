@@ -106,6 +106,7 @@ for (let i = 0; i < buttons.length; i++) {
 
 ```shell
 jq . --unbuffered foo.json
+aws ec2 describe-vpcs | jq -r '.Vpcs[] | [(.Tags[]?|select(.Key=="Name").Value), .CidrBlock] | @tsv'
 ```
 
 ## kubectl
